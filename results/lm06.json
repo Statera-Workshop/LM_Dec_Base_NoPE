@@ -1,0 +1,150 @@
+{
+ "model": "xt_nope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_NoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; no position information (causal mask only)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06",
+ "started": "2026-10-29 18:29:45",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 2.184864044189453,
+ "minutes": 10.7,
+ "history": [
+  {
+   "step": 500,
+   "loss": 3.276250123977661,
+   "acc": 0.12109375,
+   "acc_updated": 0.109375,
+   "acc_unchanged": 0.1328125,
+   "stale_rate": 0.125
+  },
+  {
+   "step": 1000,
+   "loss": 2.904791831970215,
+   "acc": 0.1171875,
+   "acc_updated": 0.1328125,
+   "acc_unchanged": 0.1015625,
+   "stale_rate": 0.1015625
+  },
+  {
+   "step": 1500,
+   "loss": 2.5624637603759766,
+   "acc": 0.20703125,
+   "acc_updated": 0.34375,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.03125
+  },
+  {
+   "step": 2000,
+   "loss": 2.5321505069732666,
+   "acc": 0.21484375,
+   "acc_updated": 0.3671875,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 2500,
+   "loss": 2.373950481414795,
+   "acc": 0.2421875,
+   "acc_updated": 0.4453125,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 3000,
+   "loss": 2.3644025325775146,
+   "acc": 0.25,
+   "acc_updated": 0.453125,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 3500,
+   "loss": 2.3254196643829346,
+   "acc": 0.2734375,
+   "acc_updated": 0.4765625,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 4000,
+   "loss": 2.2780795097351074,
+   "acc": 0.28515625,
+   "acc_updated": 0.4921875,
+   "acc_unchanged": 0.078125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 4500,
+   "loss": 2.2468550205230713,
+   "acc": 0.2734375,
+   "acc_updated": 0.4921875,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 5000,
+   "loss": 2.312229633331299,
+   "acc": 0.2578125,
+   "acc_updated": 0.46875,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 5500,
+   "loss": 2.1590864658355713,
+   "acc": 0.2734375,
+   "acc_updated": 0.4921875,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 6000,
+   "loss": 2.184864044189453,
+   "acc": 0.265625,
+   "acc_updated": 0.4765625,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0078125
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.25927734375,
+   "acc_updated": 0.4931640625,
+   "acc_unchanged": 0.025390625,
+   "stale_rate": 0.017578125
+  },
+  "2048": {
+   "acc": 0.24755859375,
+   "acc_updated": 0.45703125,
+   "acc_unchanged": 0.0380859375,
+   "stale_rate": 0.01953125
+  }
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048
+  ],
+  "batch": 32,
+  "steps": 6000,
+  "eval_every": 500,
+  "eval_samples": 512,
+  "max_hours": 1.5
+ },
+ "micro_batch": null,
+ "seconds": 645.0
+}

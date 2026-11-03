@@ -1,0 +1,83 @@
+{
+ "model": "xt_nope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_NoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; no position information (causal mask only)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-29 08:52:43",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 130.7,
+    "ms": 18.2,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 60.0,
+    "ms": 7.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 200.3,
+    "ms": 16.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 83.0,
+    "ms": 6.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 360.1,
+    "ms": 21.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 132.0,
+    "ms": 7.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 671.7,
+    "ms": 44.9,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 230.0,
+    "ms": 12.5,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 8192,
+   "train": {
+    "peak_mb": 1306.8,
+    "ms": 107.8,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 426.0,
+    "ms": 26.9,
+    "dtype": "bf16"
+   }
+  }
+ ],
+ "seconds": 3.5
+}

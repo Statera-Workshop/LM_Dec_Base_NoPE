@@ -1,0 +1,157 @@
+{
+ "model": "xt_nope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_NoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; no position information (causal mask only)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06long",
+ "started": "2026-10-30 17:49:53",
+ "smoke": false,
+ "steps": 30000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 0.1370829939842224,
+ "minutes": 54.7,
+ "history": [
+  {
+   "step": 2500,
+   "loss": 2.479641914367676,
+   "acc": 0.26171875,
+   "acc_updated": 0.4609375,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 5000,
+   "loss": 2.3115487098693848,
+   "acc": 0.26171875,
+   "acc_updated": 0.4765625,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 7500,
+   "loss": 2.1450817584991455,
+   "acc": 0.33984375,
+   "acc_updated": 0.6328125,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 10000,
+   "loss": 1.2928194999694824,
+   "acc": 0.68359375,
+   "acc_updated": 0.9140625,
+   "acc_unchanged": 0.453125,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 12500,
+   "loss": 0.5726678967475891,
+   "acc": 0.84765625,
+   "acc_updated": 0.9765625,
+   "acc_unchanged": 0.71875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 15000,
+   "loss": 0.3088681101799011,
+   "acc": 0.9140625,
+   "acc_updated": 0.9453125,
+   "acc_unchanged": 0.8828125,
+   "stale_rate": 0.0546875
+  },
+  {
+   "step": 17500,
+   "loss": 0.25176331400871277,
+   "acc": 0.95703125,
+   "acc_updated": 0.9921875,
+   "acc_unchanged": 0.921875,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 20000,
+   "loss": 0.3293221890926361,
+   "acc": 0.9375,
+   "acc_updated": 0.984375,
+   "acc_unchanged": 0.890625,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 22500,
+   "loss": 0.2218533307313919,
+   "acc": 0.95703125,
+   "acc_updated": 0.984375,
+   "acc_unchanged": 0.9296875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 25000,
+   "loss": 0.07520315051078796,
+   "acc": 0.9765625,
+   "acc_updated": 0.984375,
+   "acc_unchanged": 0.96875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 27500,
+   "loss": 0.09320009499788284,
+   "acc": 0.98828125,
+   "acc_updated": 0.9921875,
+   "acc_unchanged": 0.984375,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 30000,
+   "loss": 0.1370829939842224,
+   "acc": 0.984375,
+   "acc_updated": 0.9921875,
+   "acc_unchanged": 0.9765625,
+   "stale_rate": 0.0078125
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.97412109375,
+   "acc_updated": 0.9970703125,
+   "acc_unchanged": 0.951171875,
+   "stale_rate": 0.0029296875
+  },
+  "2048": {
+   "acc": 0.9775390625,
+   "acc_updated": 0.9951171875,
+   "acc_unchanged": 0.9599609375,
+   "stale_rate": 0.0009765625
+  },
+  "8192": {
+   "acc": 0.97412109375,
+   "acc_updated": 0.9951171875,
+   "acc_unchanged": 0.953125,
+   "stale_rate": 0.001953125
+  }
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 32,
+  "steps": 30000,
+  "eval_every": 2500,
+  "eval_samples": 512,
+  "max_hours": 5.0
+ },
+ "micro_batch": null,
+ "seconds": 3285.0
+}
