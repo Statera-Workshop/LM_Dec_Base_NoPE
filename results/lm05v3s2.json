@@ -1,0 +1,196 @@
+{
+ "model": "xt_nope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_NoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; no position information (causal mask only)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v3s2",
+ "started": "2026-11-07 23:14:43",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 1,
+   "distinct": true,
+   "steps": 6000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 1.6540122032165527,
+   "minutes": 9.7,
+   "history": [
+    {
+     "step": 500,
+     "loss": 2.8928279876708984,
+     "acc": 0.34375
+    },
+    {
+     "step": 1000,
+     "loss": 2.257781744003296,
+     "acc": 0.28125
+    },
+    {
+     "step": 1500,
+     "loss": 2.023956775665283,
+     "acc": 0.1875
+    },
+    {
+     "step": 2000,
+     "loss": 1.7133845090866089,
+     "acc": 0.296875
+    },
+    {
+     "step": 2500,
+     "loss": 1.8685086965560913,
+     "acc": 0.28125
+    },
+    {
+     "step": 3000,
+     "loss": 1.8374508619308472,
+     "acc": 0.25
+    },
+    {
+     "step": 3500,
+     "loss": 1.369753122329712,
+     "acc": 0.25
+    },
+    {
+     "step": 4000,
+     "loss": 1.8520820140838623,
+     "acc": 0.234375
+    },
+    {
+     "step": 4500,
+     "loss": 1.8212779760360718,
+     "acc": 0.171875
+    },
+    {
+     "step": 5000,
+     "loss": 1.6083205938339233,
+     "acc": 0.296875
+    },
+    {
+     "step": 5500,
+     "loss": 1.921321988105774,
+     "acc": 0.265625
+    },
+    {
+     "step": 6000,
+     "loss": 1.6540122032165527,
+     "acc": 0.265625
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.2421875,
+     "keys": 0.255859375,
+     "values": 0.021484375,
+     "true_recall": -0.013671875
+    },
+    "2048": {
+     "normal": 0.27734375,
+     "keys": 0.271484375,
+     "values": 0.025390625,
+     "true_recall": 0.005859375
+    }
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": null
+  },
+  "16": {
+   "queries": 4,
+   "distinct": true,
+   "steps": 6000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 2.9274392127990723,
+   "minutes": 9.7,
+   "history": [
+    {
+     "step": 500,
+     "loss": 3.5574495792388916,
+     "acc": 0.05859375
+    },
+    {
+     "step": 1000,
+     "loss": 3.381833076477051,
+     "acc": 0.05859375
+    },
+    {
+     "step": 1500,
+     "loss": 3.2729971408843994,
+     "acc": 0.03125
+    },
+    {
+     "step": 2000,
+     "loss": 3.1099801063537598,
+     "acc": 0.0625
+    },
+    {
+     "step": 2500,
+     "loss": 3.0767126083374023,
+     "acc": 0.0625
+    },
+    {
+     "step": 3000,
+     "loss": 3.155761241912842,
+     "acc": 0.046875
+    },
+    {
+     "step": 3500,
+     "loss": 3.0447299480438232,
+     "acc": 0.08984375
+    },
+    {
+     "step": 4000,
+     "loss": 3.0799498558044434,
+     "acc": 0.0625
+    },
+    {
+     "step": 4500,
+     "loss": 3.0584237575531006,
+     "acc": 0.06640625
+    },
+    {
+     "step": 5000,
+     "loss": 3.020611047744751,
+     "acc": 0.078125
+    },
+    {
+     "step": 5500,
+     "loss": 2.921328067779541,
+     "acc": 0.0625
+    },
+    {
+     "step": 6000,
+     "loss": 2.9274392127990723,
+     "acc": 0.06640625
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.06201171875,
+     "keys": 0.05419921875,
+     "values": 0.0146484375,
+     "true_recall": 0.0078125
+    },
+    "2048": {
+     "normal": 0.06396484375,
+     "keys": 0.05712890625,
+     "values": 0.013671875,
+     "true_recall": 0.0068359375
+    }
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": null
+  }
+ },
+ "seconds": 1165.2
+}

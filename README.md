@@ -4,7 +4,7 @@ NoPE - Base family, decoder-only byte-level language model, standardised in the 
 
 ## Status
 
-- Verification level: **Benchmarked (3 seed-repeat runs, see results)**
+- Verification level: **Benchmarked (5 seed-repeat runs, see results)**
 - Failure class: Note: full memory-update solution in 1 of 2 long runs; LM-02 unstable at 1B tokens
 
 ## Provenance
@@ -29,6 +29,8 @@ All models share one protocol: 256-byte vocabulary, dim 512, 6 layers, 8 heads x
 - Peak GPU memory at length 8192 (batch 1): train 1307 MB, inference 426 MB
 - LM-05 recall `lm05v3`: 4 pairs @ 512: 0.26 (keys removed 0.24); 4 pairs @ 2048: 0.23 (keys removed 0.30); 16 pairs @ 512: 0.06 (keys removed 0.07); 16 pairs @ 2048: 0.07 (keys removed 0.06)
 - LM-05 recall `lm05v3long`: 4 pairs @ 512: 0.25 (keys removed 0.25); 4 pairs @ 2048: 0.26 (keys removed 0.26); 4 pairs @ 8192: 0.25 (keys removed 0.23); 16 pairs @ 512: 0.07 (keys removed 0.07); 16 pairs @ 2048: 0.06 (keys removed 0.06); 16 pairs @ 8192: 0.07 (keys removed 0.06)
+- LM-05 recall `lm05v3s2`: 4 pairs @ 512: 0.24 (keys removed 0.26); 4 pairs @ 2048: 0.28 (keys removed 0.27); 16 pairs @ 512: 0.06 (keys removed 0.05); 16 pairs @ 2048: 0.06 (keys removed 0.06)
+- LM-05 recall `lm05v3s3`: 4 pairs @ 512: 0.26 (keys removed 0.23); 4 pairs @ 2048: 0.26 (keys removed 0.22); 16 pairs @ 512: 0.06 (keys removed 0.06); 16 pairs @ 2048: 0.06 (keys removed 0.06)
 - LM-06 memory update `lm06`: @512: latest 0.49, unchanged 0.03, stale 0.02; @2048: latest 0.46, unchanged 0.04, stale 0.02
 - LM-06 memory update `lm06long`: @512: latest 1.00, unchanged 0.95, stale 0.00; @2048: latest 1.00, unchanged 0.96, stale 0.00; @8192: latest 1.00, unchanged 0.95, stale 0.00
 - LM-06 memory update `lm06s2`: @512: latest 0.48, unchanged 0.03, stale 0.02; @2048: latest 0.49, unchanged 0.03, stale 0.01
