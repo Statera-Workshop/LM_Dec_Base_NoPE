@@ -1,0 +1,50 @@
+{
+ "model": "xt_nope",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_NoPE",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; no position information (causal mask only)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm08",
+ "started": "2026-11-09 19:14:56",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "bf16": true,
+ "final_bits": 3.366357451111461,
+ "test": {
+  "512": {
+   "bits_full": 3.316510988485627
+  },
+  "2048": {
+   "bits_full": 3.8959952227085664,
+   "bits_last512": 3.2903808044267864,
+   "gain_from_history": -0.60561441828178
+  },
+  "8192": {
+   "bits_full": 3.9593788267447767,
+   "bits_last512": 3.3122211392338303,
+   "gain_from_history": -0.6471576875109464
+  }
+ },
+ "config": {
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 16,
+  "steps": 6000,
+  "eval_every": 1000,
+  "eval_samples": 64,
+  "tail": 256,
+  "max_hours": 1.5
+ },
+ "minutes": 5.4,
+ "seconds": 327.0
+}
